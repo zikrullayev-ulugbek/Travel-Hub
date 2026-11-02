@@ -1,0 +1,408 @@
+/* ============ Bootstrap ranglarini o‘zimizning ranglarga almashtirish ============ */
+:root {
+  --bs-primary: #123b5d;
+  --bs-primary-rgb: 18, 59, 93;
+  --bs-info: #123B5D;
+  --bs-info-rgb: 41, 169, 214;
+  --bs-warning: #ff9f43;
+  --bs-warning-rgb: 255, 159, 67;
+  --bs-body-bg: #f5f8fb;
+  --bs-body-color: #1d2939;
+  --bs-body-font-family: "Inter", sans-serif;
+  --bs-link-color: #123b5d;
+  --bs-border-color: #e4eaf0;
+}
+body {
+  overflow-x: hidden;
+  
+}
+
+.btn-primary {
+  --bs-btn-bg: #123b5d;
+  --bs-btn-border-color: #123b5d;
+  --bs-btn-hover-bg: #0d2c46;
+  --bs-btn-hover-border-color: #0d2c46;
+  --bs-btn-active-bg: #0d2c46;
+  --bs-btn-active-border-color: #0d2c46;
+  --bs-btn-padding-x: 1.4rem;
+  --bs-btn-padding-y: 0.7rem;
+  --bs-btn-border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(18, 59, 93, 0.18);
+}
+.btn-info {
+  --bs-btn-bg: #123B5D;
+  --bs-btn-border-color: #123B5D;
+  --bs-btn-color: #fff;
+  --bs-btn-hover-bg: #123b5d;
+  --bs-btn-hover-border-color: #123b5d;
+  --bs-btn-hover-color: #fff;
+}
+.btn-warning {
+  --bs-btn-bg: #ff9f43;
+  --bs-btn-border-color: #ff9f43;
+  --bs-btn-color: #6c3c00;
+  --bs-btn-hover-bg: #ff9f43;
+  --bs-btn-hover-border-color: #ff9f43;
+  --bs-btn-hover-color: #6c3c00;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+.btn-light {
+  background: #edf6fa;
+  border: 0;
+  color: #123b5d;
+  border-radius: 12px;
+  padding: 14px;
+}
+.btn-light:hover {
+  background: #123b5d;
+  color: #fff;
+}
+
+/* Filtr pill'lari (Bootstrap nav-pills) */
+.nav-pills {
+  --bs-nav-pills-link-active-bg: #123b5d;
+  --bs-nav-pills-border-radius: 10px;
+}
+.nav-pills .nav-link {
+  background: #fff;
+  border: 1px solid #e4eaf0;
+  color: #667085;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.nav-pills .nav-link:hover {
+  background: #123b5d;
+  color: #fff;
+}
+
+/* ============ Sahifalar almashinuvi: faqat :target (JS ham, Bootstrap ham kerak emas) ============ */
+.page {
+  display: none;
+}
+.page:target {
+  display: block;
+}
+main:not(:has(.page:target)) #page-home {
+  display: block;
+}
+
+/* ============ Navbar ============ */
+.th-nav {
+  height: 76px;
+  backdrop-filter: blur(18px);
+}
+.th-nav .nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475467;
+}
+.th-nav .nav-link:hover {
+  color: #123b5d;
+}
+@media (max-width: 991px) {
+  .th-nav .navbar-collapse {
+    background: #fff;
+    margin: 14px -12px 0;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 16px 44px rgba(17, 59, 91, 0.1);
+  }
+}
+/* aktiv menyu */
+body:not(:has(.page:target)) .th-nav .nav-link[href="#page-home"],
+body:has(#page-destinations:target)
+  .th-nav
+  .nav-link[href="#page-destinations"],
+body:has(#page-tours:target) .th-nav .nav-link[href="#page-tours"],
+body:has(#page-hotels:target) .th-nav .nav-link[href="#page-hotels"],
+body:has(#page-about:target) .th-nav .nav-link[href="#page-about"] {
+  color: #123b5d;
+  font-weight: 700;
+  box-shadow: inset 0 -2px 0 #29a9d6;
+}
+.logo-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(135deg, #123b5d, #29a9d6);
+}
+
+/* ============ Umumiy ============ */
+.py-section {
+  padding-block: 100px;
+}
+@media (max-width: 767px) {
+  .py-section {
+    padding-block: 70px;
+  }
+}
+.eyebrow {
+  display: inline-block;
+  color: #29a9d6;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.h-title {
+  color: #123b5d;
+  font-size: clamp(30px, 3vw, 44px);
+  letter-spacing: -0.035em;
+  line-height: 1.13;
+  margin: 11px 0 12px;
+  font-weight: 600;
+}
+.icon-box {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 14px;
+  color: #29a9d6;
+  background: #eaf8fc;
+  font-size: 20px;
+}
+
+/* ============ Hero ============ */
+.hero {
+  min-height: 760px;
+  padding-top: 76px;
+}
+.hero-shade {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 37, 57, 0.9),
+      rgba(7, 37, 57, 0.62) 48%,
+      rgba(7, 37, 57, 0.1)
+    ),
+    linear-gradient(0deg, rgba(7, 37, 57, 0.35), transparent 50%);
+}
+.hero > img {
+  object-position: center 42%;
+}
+.hero-title {
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+  max-width: 780px;
+}
+.hero-kicker {
+  color: #9ee8ff;
+  border: 1px solid rgba(158, 232, 255, 0.45);
+  background: rgba(41, 169, 214, 0.15);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+/* ============ Joy kartalari ============ */
+.place-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 44px rgba(17, 59, 91, 0.1);
+}
+.pc {
+  height: 230px;
+}
+.pc-tall {
+  height: 478px;
+}
+.pc-md {
+  height: 320px;
+}
+.place-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.place-card:hover img {
+  transform: scale(1.055);
+}
+.place-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+  padding: 24px;
+  background: linear-gradient(0deg, rgba(5, 30, 48, 0.83), transparent 65%);
+}
+.place-overlay .badge {
+  width: max-content;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  font-weight: 400;
+}
+.place-overlay h3 {
+  margin: 10px 0 3px;
+  font-size: 24px;
+}
+.place-overlay p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+}
+
+/* ============ Tur va mehmonxona kartalari ============ */
+.tour-card,
+.hotel-card {
+  border: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(18, 59, 93, 0.08);
+  transition: 0.25s;
+}
+.tour-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 44px rgba(17, 59, 91, 0.1);
+}
+.hotel-card {
+  box-shadow: 0 16px 44px rgba(17, 59, 91, 0.1);
+}
+.hotel-card img {
+  min-height: 230px;
+}
+.img-cover {
+  height: 240px;
+  object-fit: cover;
+}
+.rating {
+  background: #fff8e9;
+  color: #9b5d12;
+}
+.rating i {
+  color: #ff9f43;
+}
+.circle-btn {
+  width: 43px;
+  height: 43px;
+  padding: 0;
+  color: #fff;
+}
+
+/* ============ Nega biz ============ */
+.why-img {
+  height: 620px;
+}
+.review-card {
+  position: absolute;
+  bottom: 34px;
+  right: -40px;
+}
+@media (max-width: 767px) {
+  .review-card {
+    right: 15px;
+  }
+  .why-img {
+    height: 470px;
+  }
+}
+.review-score {
+  background: #fff2df;
+  color: #ff9f43;
+  border-radius: 12px;
+  padding: 13px;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+/* ============ CTA ============ */
+.cta-box {
+  padding: 56px 64px;
+  background: linear-gradient(115deg, #123b5d, #15567c);
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-box::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 55px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  right: -80px;
+  top: -100px;
+}
+.cta-box > * {
+  position: relative;
+  z-index: 1;
+}
+.cta-small {
+  color: #85defc;
+}
+.cta-box h2 {
+  font-size: 34px;
+}
+@media (max-width: 767px) {
+  .cta-box {
+    padding: 38px 28px;
+  }
+}
+
+/* ============ Ichki sahifalar ============ */
+.page-hero {
+  margin-top: 76px;
+  padding: 105px 0 95px;
+  background: linear-gradient(135deg, #0b2e48, #123b5d 55%, #176a91);
+}
+.page-hero h1 {
+  margin: 14px 0;
+  font-size: clamp(38px, 5vw, 60px);
+  letter-spacing: -0.04em;
+}
+.page-hero p {
+  max-width: 650px;
+}
+.about-img {
+  height: 520px;
+}
+
+/* ============ Footer ============ */
+.th-footer {
+  background: #092a41;
+  color: rgba(255, 255, 255, 0.68);
+}
+.th-footer a {
+  color: rgba(255, 255, 255, 0.68);
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 0;
+}
+.th-footer a:hover {
+  color: #fff;
+}
+.subscribe {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 5px;
+  border-radius: 11px;
+}
+.subscribe .form-control {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 12px;
+  box-shadow: none;
+}
+
+/* ============ Modal ============ */
+.done-circle {
+  margin: auto;
+  width: 68px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #24a875;
+  border-radius: 50%;
+  font-size: 30px;
+}

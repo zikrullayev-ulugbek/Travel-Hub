@@ -1,0 +1,2051 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Hub — O‘zbekiston bo‘ylab sayohat</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top bg-white bg-opacity-90 border-bottom th-nav"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary"
+          href="#page-home"
+        >
+          <span class="logo-mark"><i class="bi bi-geo-alt"></i></span>
+          <span>Travel <b class="text-info">Hub</b></span>
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          aria-controls="menu"
+          aria-expanded="false"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-label="Menyu"
+        >
+          <i class="bi bi-list fs-2"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav mx-auto gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#page-home">Bosh sahifa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#page-destinations">Yo‘nalishlar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#page-tours">Sayohat turlari</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#page-hotels">Mehmonxonalar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#page-about">Biz haqimizda</a>
+            </li>
+          </ul>
+          <button
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#bookModal"
+          >
+            Sayohatni boshlash
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ================= HOME ================= -->
+      <section id="page-home" class="page">
+        <div
+          class="hero position-relative d-flex align-items-center text-white"
+        >
+          <img
+            src="images/hero-img2.png"
+            alt=""
+            class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+          />
+          <div
+            class="hero-shade position-absolute top-0 start-0 w-100 h-100"
+          ></div>
+          <div class="container position-relative py-5">
+            <span
+              class="badge rounded-pill text-uppercase px-3 py-2 hero-kicker"
+              >O‘zbekistonni yangidan kashf eting</span
+            >
+            <h1 class="display-3 fw-semibold my-3 hero-title">
+              Unutilmas sayohatlar shu yerdan boshlanadi
+            </h1>
+            <p class="lead text-white-50 col-lg-7 px-0">
+              Eng go‘zal manzillar, sinalgan mehmonxonalar va siz uchun puxta
+              rejalangan sayohatlar.
+            </p>
+
+            <div
+              class="row g-0 mt-4 col-xl-11 bg-white rounded-4 p-2 shadow-lg text-body"
+            >
+              <div class="col-md-4 px-3 py-2 border-end">
+                <label class="small fw-bold text-primary" for="searchDest"
+                  ><i class="bi bi-geo-alt me-1"></i>Qayerga?</label
+                >
+                <select
+                  id="searchDest"
+                  class="form-select form-select-sm border-0 shadow-none px-0 text-secondary"
+                >
+                  <option>Samarqand</option>
+                  <option>Buxoro</option>
+                  <option>Xiva</option>
+                  <option>Toshkent</option>
+                  <option>Tog‘lar</option>
+                </select>
+              </div>
+              <div class="col-md-3 px-3 py-2 border-end">
+                <label class="small fw-bold text-primary" for="searchDate"
+                  ><i class="bi bi-calendar3 me-1"></i>Qachon?</label
+                >
+                <input
+                  id="searchDate"
+                  type="date"
+                  class="form-control form-control-sm border-0 shadow-none px-0 text-secondary"
+                />
+              </div>
+              <div class="col-md-3 px-3 py-2">
+                <label class="small fw-bold text-primary" for="searchPeople"
+                  ><i class="bi bi-people me-1"></i>Sayohatchilar</label
+                >
+                <select
+                  id="searchPeople"
+                  class="form-select form-select-sm border-0 shadow-none px-0 text-secondary"
+                >
+                  <option>1 kishi</option>
+                  <option selected>2 kishi</option>
+                  <option>3–4 kishi</option>
+                  <option>5+ kishi</option>
+                </select>
+              </div>
+              <div class="col-md-2 d-grid p-1">
+                <a
+                  href="#page-tours"
+                  class="btn btn-primary d-flex align-items-center justify-content-center"
+                  ><i class="bi bi-search me-2"></i>Izlash</a
+                >
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-4 mt-4 text-white-50 small">
+              <div>
+                <strong class="fs-5 text-white">50+</strong> sayohat yo‘nalishi
+              </div>
+              <div>
+                <strong class="fs-5 text-white">12 000+</strong> mamnun
+                sayohatchi
+              </div>
+              <div>
+                <strong class="fs-5 text-white">4.9</strong> o‘rtacha baho
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mashhur manzillar -->
+        <div class="py-section">
+          <div class="container">
+            <div class="col-lg-7 mb-5">
+              <span class="eyebrow">Mashhur manzillar</span>
+              <h2 class="h-title">O‘zbekiston bo‘ylab sayohat qiling</h2>
+              <p class="text-secondary">
+                Har bir shaharda sizni yangi hikoyalar, qadimiy obidalar va
+                betakror taassurotlar kutmoqda.
+              </p>
+            </div>
+            <div class="row g-3">
+              <div class="col-lg-5">
+                <article class="place-card pc-tall">
+                  <img src="images/samarqand.jpg" alt="Samarqand" />
+                  <div class="place-overlay">
+                    <span class="badge">24 ta sayohat</span>
+                    <h3>Samarqand</h3>
+                    <p>Tarix va betakror me‘morchilik</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-lg-7">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <article class="place-card pc">
+                      <img src="images/buxoro.jpg" alt="Buxoro" />
+                      <div class="place-overlay">
+                        <span class="badge">18 ta sayohat</span>
+                        <h3>Buxoro</h3>
+                        <p>Qadimiy shahar nafasi</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-6">
+                    <article class="place-card pc">
+                      <img src="images/xiva.jpg" alt="Xiva" />
+                      <div class="place-overlay">
+                        <span class="badge">12 ta sayohat</span>
+                        <h3>Xiva</h3>
+                        <p>Ochiq osmon ostidagi muzey</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-6">
+                    <article class="place-card pc">
+                      <img src="images/tungi_samarqand_rasmi-upscaled-4x.png" alt="Toshkent" />
+                      <div class="place-overlay">
+                        <span class="badge">16 ta sayohat</span>
+                        <h3>Toshkent</h3>
+                        <p>Zamonaviylik va an‘analar</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <a
+                href="#page-destinations"
+                class="fw-bold text-primary text-decoration-none"
+                >Barcha yo‘nalishlarni ko‘rish <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tavsiya etilgan turlar -->
+        <div class="py-section bg-body-secondary">
+          <div class="container">
+            <div class="col-lg-7 mb-5">
+              <span class="eyebrow">Tavsiya etamiz</span>
+              <h2 class="h-title">Siz uchun tanlangan sayohatlar</h2>
+              <p class="text-secondary">
+                Tajribali yo‘lboshchilar va puxta dastur bilan eng sara
+                sayohatlar.
+              </p>
+            </div>
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4">
+                <div class="card tour-card h-100">
+                  <div class="position-relative">
+                    <img
+                      src="images/samarqand.jpg"
+                      class="card-img-top img-cover"
+                      alt="Samarqand durdonalari"
+                    />
+                    <span
+                      class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                      >Eng ko‘p tanlangan</span
+                    >
+                    <span class="badge rating position-absolute top-0 end-0 m-3"
+                      ><i class="bi bi-star-fill"></i> 4.9</span
+                    >
+                  </div>
+                  <div class="card-body p-4">
+                    <div
+                      class="d-flex justify-content-between small text-secondary"
+                    >
+                      <span><i class="bi bi-geo-alt"></i> Samarqand</span
+                      ><span
+                        ><i class="bi bi-calendar3"></i> 3 kun / 2 tun</span
+                      >
+                    </div>
+                    <h3 class="h5 text-primary my-3">Samarqand durdonalari</h3>
+                    <div
+                      class="d-flex justify-content-between align-items-center border-top pt-3"
+                    >
+                      <div>
+                        <small class="d-block text-secondary"
+                          >Bir kishi uchun</small
+                        ><strong class="text-primary fs-5">1 890 000</strong>
+                        <small>so‘m</small>
+                      </div>
+                      <button
+                        class="btn btn-info rounded-circle circle-btn"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookModal"
+                        aria-label="Band qilish"
+                      >
+                        <i class="bi bi-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card tour-card h-100">
+                  <div class="position-relative">
+                    <img
+                      src="images/buxoro.jpg"
+                      class="card-img-top img-cover"
+                      alt="Buxoro va Xiva bo‘ylab"
+                    />
+                    <span
+                      class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                      >Madaniy sayohat</span
+                    >
+                    <span class="badge rating position-absolute top-0 end-0 m-3"
+                      ><i class="bi bi-star-fill"></i> 4.8</span
+                    >
+                  </div>
+                  <div class="card-body p-4">
+                    <div
+                      class="d-flex justify-content-between small text-secondary"
+                    >
+                      <span><i class="bi bi-geo-alt"></i> Buxoro — Xiva</span
+                      ><span
+                        ><i class="bi bi-calendar3"></i> 5 kun / 4 tun</span
+                      >
+                    </div>
+                    <h3 class="h5 text-primary my-3">Buxoro va Xiva bo‘ylab</h3>
+                    <div
+                      class="d-flex justify-content-between align-items-center border-top pt-3"
+                    >
+                      <div>
+                        <small class="d-block text-secondary"
+                          >Bir kishi uchun</small
+                        ><strong class="text-primary fs-5">3 250 000</strong>
+                        <small>so‘m</small>
+                      </div>
+                      <button
+                        class="btn btn-info rounded-circle circle-btn"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookModal"
+                        aria-label="Band qilish"
+                      >
+                        <i class="bi bi-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card tour-card h-100">
+                  <div class="position-relative">
+                    <img
+                      src="images/mountain.jpg"
+                      class="card-img-top img-cover"
+                      alt="Tog‘lar sari sayohat"
+                    />
+                    <span
+                      class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                      >Faol hordiq</span
+                    >
+                    <span class="badge rating position-absolute top-0 end-0 m-3"
+                      ><i class="bi bi-star-fill"></i> 4.9</span
+                    >
+                  </div>
+                  <div class="card-body p-4">
+                    <div
+                      class="d-flex justify-content-between small text-secondary"
+                    >
+                      <span
+                        ><i class="bi bi-geo-alt"></i> Chimyon — Chorvoq</span
+                      ><span
+                        ><i class="bi bi-calendar3"></i> 2 kun / 1 tun</span
+                      >
+                    </div>
+                    <h3 class="h5 text-primary my-3">Tog‘lar sari sayohat</h3>
+                    <div
+                      class="d-flex justify-content-between align-items-center border-top pt-3"
+                    >
+                      <div>
+                        <small class="d-block text-secondary"
+                          >Bir kishi uchun</small
+                        ><strong class="text-primary fs-5">1 450 000</strong>
+                        <small>so‘m</small>
+                      </div>
+                      <button
+                        class="btn btn-info rounded-circle circle-btn"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookModal"
+                        aria-label="Band qilish"
+                      >
+                        <i class="bi bi-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nega biz -->
+        <div class="py-section">
+          <div class="container">
+            <div class="row align-items-center g-5">
+              <div class="col-lg-6">
+                <div class="position-relative">
+                  <img
+                    src="images/dome.jpg"
+                    class="img-fluid rounded-5 w-100 object-fit-cover why-img"
+                    alt="Samarqand gumbazi"
+                  />
+                  <div
+                    class="review-card d-flex align-items-center gap-3 bg-white rounded-4 shadow p-3"
+                  >
+                    <span class="review-score">4.9</span>
+                    <div>
+                      <div class="fw-bold">
+                        <i class="bi bi-star-fill text-warning me-1"></i
+                        >Sayohatchilar tanlovi
+                      </div>
+                      <small class="text-secondary">2 400 dan ortiq izoh</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 ps-lg-5">
+                <span class="eyebrow">Nega Travel Hub?</span>
+                <h2 class="h-title">
+                  Sayohatingizni biz bilan ishonchli rejalashtiring
+                </h2>
+                <div class="d-flex gap-3 my-4">
+                  <span class="icon-box"
+                    ><i class="bi bi-shield-check"></i
+                  ></span>
+                  <div>
+                    <h3 class="h6 fw-bold text-primary mb-1">
+                      Ishonchli xizmat
+                    </h3>
+                    <p class="small text-secondary mb-0">
+                      Har bir hamkor va yo‘nalish sifat nazoratidan o‘tadi.
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex gap-3 my-4">
+                  <span class="icon-box"><i class="bi bi-wallet2"></i></span>
+                  <div>
+                    <h3 class="h6 fw-bold text-primary mb-1">
+                      Qulay va shaffof narxlar
+                    </h3>
+                    <p class="small text-secondary mb-0">
+                      Yashirin to‘lovlarsiz, oldindan ma‘lum yakuniy narx.
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex gap-3 my-4">
+                  <span class="icon-box"><i class="bi bi-headset"></i></span>
+                  <div>
+                    <h3 class="h6 fw-bold text-primary mb-1">
+                      Doimo yordamga tayyormiz
+                    </h3>
+                    <p class="small text-secondary mb-0">
+                      Sayohat davomida sizni uzluksiz qo‘llab-quvvatlaymiz.
+                    </p>
+                  </div>
+                </div>
+                <a href="#page-about" class="btn btn-primary">Biz haqimizda</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container pb-5 mb-5">
+          <div
+            class="cta-box d-flex flex-wrap align-items-center justify-content-between gap-4 text-white"
+          >
+            <div>
+              <small class="fw-bold cta-small"
+                >Keyingi manzilingiz tayyormi?</small
+              >
+              <h2 class="my-2">Orzudagi sayohatni bugun boshlang</h2>
+              <p class="mb-0 text-white-50">
+                Bizga istaklaringizni ayting, qolganini mutaxassislarimiz
+                rejalashtiradi.
+              </p>
+            </div>
+            <button
+              class="btn btn-warning fw-bold px-4 py-3"
+              data-bs-toggle="modal"
+              data-bs-target="#bookModal"
+            >
+              Bepul maslahat olish <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= YO‘NALISHLAR ================= -->
+      <section id="page-destinations" class="page">
+        <div class="page-hero text-center text-white">
+          <div class="container">
+            <span class="eyebrow">Yangi manzillar</span>
+            <h1>Har safar yangi taassurot</h1>
+            <p class="mx-auto text-white-50">
+              Tarixiy shaharlar, go‘zal tabiat va unutilmas lahzalar —
+              o‘zingizga mos yo‘nalishni tanlang.
+            </p>
+          </div>
+        </div>
+        <div class="py-section">
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4">
+                <article class="place-card pc-md">
+                  <img src="images/samarqand.jpg" alt="Samarqand" />
+                  <div class="place-overlay">
+                    <span class="badge">24 ta sayohat</span>
+                    <h3>Samarqand</h3>
+                    <p>Tarix va betakror me‘morchilik</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="place-card pc-md">
+                  <img src="images/buxoro.jpg" alt="Buxoro" />
+                  <div class="place-overlay">
+                    <span class="badge">18 ta sayohat</span>
+                    <h3>Buxoro</h3>
+                    <p>Qadimiy shahar nafasi</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="place-card pc-md">
+                  <img src="images/xiva.jpg" alt="Xiva" />
+                  <div class="place-overlay">
+                    <span class="badge">12 ta sayohat</span>
+                    <h3>Xiva</h3>
+                    <p>Ochiq osmon ostidagi muzey</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <article class="place-card pc-md">
+                  <img src="images/tungi_samarqand_rasmi-upscaled-4x.png" alt="Toshkent" />
+                  <div class="place-overlay">
+                    <span class="badge">16 ta sayohat</span>
+                    <h3>Toshkent</h3>
+                    <p>Zamonaviylik va an‘analar</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TOURS ================= -->
+      <section id="page-tours" class="page">
+        <div class="page-hero text-center text-white">
+          <div class="container">
+            <span class="eyebrow">Tayyor sayohatlar</span>
+            <h1>Eng yaxshi sayohat dasturlari</h1>
+            <p class="mx-auto text-white-50">
+              Budjetingiz va vaqtingizga mos, puxta rejalangan sayohatlardan
+              birini tanlang.
+            </p>
+          </div>
+        </div>
+        <div class="py-section">
+          <div class="container">
+            <!-- Bootstrap pills = filtr -->
+            <ul
+              class="nav nav-pills flex-nowrap overflow-auto gap-2 mb-4 pb-1"
+              role="tablist"
+            >
+              <li>
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="pill"
+                  data-bs-target="#t-all"
+                  type="button"
+                >
+                  Barchasi
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="pill"
+                  data-bs-target="#t-sam"
+                  type="button"
+                >
+                  Samarqand
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="pill"
+                  data-bs-target="#t-bux"
+                  type="button"
+                >
+                  Buxoro
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="pill"
+                  data-bs-target="#t-xiv"
+                  type="button"
+                >
+                  Xiva
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="pill"
+                  data-bs-target="#t-tosh"
+                  type="button"
+                >
+                  Toshkent
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="pill"
+                  data-bs-target="#t-tog"
+                  type="button"
+                >
+                  Tog‘lar
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <!-- BARCHASI -->
+              <div class="tab-pane fade show active" id="t-all">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/samarqand.jpg"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Eng ko‘p tanlangan</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.9</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span><i class="bi bi-geo-alt"></i> Samarqand</span
+                          ><span
+                            ><i class="bi bi-calendar3"></i> 3 kun / 2 tun</span
+                          >
+                        </div>
+                        <h3 class="h5 text-primary my-3">
+                          Samarqand durdonalari
+                        </h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5"
+                              >1 890 000</strong
+                            >
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/buxoro.jpg"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Madaniy sayohat</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.8</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span
+                            ><i class="bi bi-geo-alt"></i> Buxoro — Xiva</span
+                          ><span
+                            ><i class="bi bi-calendar3"></i> 5 kun / 4 tun</span
+                          >
+                        </div>
+                        <h3 class="h5 text-primary my-3">
+                          Buxoro va Xiva bo‘ylab
+                        </h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5"
+                              >3 250 000</strong
+                            >
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/mountain.jpg"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Faol hordiq</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.9</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span
+                            ><i class="bi bi-geo-alt"></i> Chimyon —
+                            Chorvoq</span
+                          ><span
+                            ><i class="bi bi-calendar3"></i> 2 kun / 1 tun</span
+                          >
+                        </div>
+                        <h3 class="h5 text-primary my-3">
+                          Tog‘lar sari sayohat
+                        </h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5"
+                              >1 450 000</strong
+                            >
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/dome.jpg"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Mashhur</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.9</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span
+                            ><i class="bi bi-geo-alt"></i> Samarqand —
+                            Buxoro</span
+                          ><span
+                            ><i class="bi bi-calendar3"></i> 4 kun / 3 tun</span
+                          >
+                        </div>
+                        <h3 class="h5 text-primary my-3">Buyuk Ipak yo‘li</h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5"
+                              >2 780 000</strong
+                            >
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/xiva.jpg"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Tarixiy</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.8</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span><i class="bi bi-geo-alt"></i> Xiva</span
+                          ><span
+                            ><i class="bi bi-calendar3"></i> 2 kun / 1 tun</span
+                          >
+                        </div>
+                        <h3 class="h5 text-primary my-3">Xiva — qal‘a sayri</h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5"
+                              >1 250 000</strong
+                            >
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/tungi_samarqand_rasmi-upscaled-4x.png"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Shahar sayri</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.7</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span><i class="bi bi-geo-alt"></i> Toshkent</span
+                          ><span><i class="bi bi-calendar3"></i> 1 kun</span>
+                        </div>
+                        <h3 class="h5 text-primary my-3">Toshkent kechalari</h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5">690 000</strong>
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SAMARQAND -->
+              <div class="tab-pane fade" id="t-sam">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/samarqand.jpg"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Eng ko‘p tanlangan</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.9</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span><i class="bi bi-geo-alt"></i> Samarqand</span
+                          ><span
+                            ><i class="bi bi-calendar3"></i> 3 kun / 2 tun</span
+                          >
+                        </div>
+                        <h3 class="h5 text-primary my-3">
+                          Samarqand durdonalari
+                        </h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5"
+                              >1 890 000</strong
+                            >
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/dome.jpg"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Mashhur</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.9</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span
+                            ><i class="bi bi-geo-alt"></i> Samarqand —
+                            Buxoro</span
+                          ><span
+                            ><i class="bi bi-calendar3"></i> 4 kun / 3 tun</span
+                          >
+                        </div>
+                        <h3 class="h5 text-primary my-3">Buyuk Ipak yo‘li</h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5"
+                              >2 780 000</strong
+                            >
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BUXORO -->
+              <div class="tab-pane fade" id="t-bux">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/buxoro.jpg"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Madaniy sayohat</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.8</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span
+                            ><i class="bi bi-geo-alt"></i> Buxoro — Xiva</span
+                          ><span
+                            ><i class="bi bi-calendar3"></i> 5 kun / 4 tun</span
+                          >
+                        </div>
+                        <h3 class="h5 text-primary my-3">
+                          Buxoro va Xiva bo‘ylab
+                        </h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5"
+                              >3 250 000</strong
+                            >
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/dome.jpg"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Mashhur</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.9</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span
+                            ><i class="bi bi-geo-alt"></i> Samarqand —
+                            Buxoro</span
+                          ><span
+                            ><i class="bi bi-calendar3"></i> 4 kun / 3 tun</span
+                          >
+                        </div>
+                        <h3 class="h5 text-primary my-3">Buyuk Ipak yo‘li</h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5"
+                              >2 780 000</strong
+                            >
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- XIVA -->
+              <div class="tab-pane fade" id="t-xiv">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/buxoro.jpg"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Madaniy sayohat</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.8</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span
+                            ><i class="bi bi-geo-alt"></i> Buxoro — Xiva</span
+                          ><span
+                            ><i class="bi bi-calendar3"></i> 5 kun / 4 tun</span
+                          >
+                        </div>
+                        <h3 class="h5 text-primary my-3">
+                          Buxoro va Xiva bo‘ylab
+                        </h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5"
+                              >3 250 000</strong
+                            >
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/xiva.jpg"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Tarixiy</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.8</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span><i class="bi bi-geo-alt"></i> Xiva</span
+                          ><span
+                            ><i class="bi bi-calendar3"></i> 2 kun / 1 tun</span
+                          >
+                        </div>
+                        <h3 class="h5 text-primary my-3">Xiva — qal‘a sayri</h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5"
+                              >1 250 000</strong
+                            >
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TOSHKENT -->
+              <div class="tab-pane fade" id="t-tosh">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/tungi_samarqand_rasmi-upscaled-4x.png "
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Shahar sayri</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.7</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span><i class="bi bi-geo-alt"></i> Toshkent</span
+                          ><span><i class="bi bi-calendar3"></i> 1 kun</span>
+                        </div>
+                        <h3 class="h5 text-primary my-3">Toshkent kechalari</h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5">690 000</strong>
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TOG‘LAR -->
+              <div class="tab-pane fade" id="t-tog">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card tour-card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="images/mountain.jpg"
+                          class="card-img-top img-cover"
+                          alt=""
+                        /><span
+                          class="badge bg-white text-primary position-absolute top-0 start-0 m-3"
+                          >Faol hordiq</span
+                        ><span
+                          class="badge rating position-absolute top-0 end-0 m-3"
+                          ><i class="bi bi-star-fill"></i> 4.9</span
+                        >
+                      </div>
+                      <div class="card-body p-4">
+                        <div
+                          class="d-flex justify-content-between small text-secondary"
+                        >
+                          <span
+                            ><i class="bi bi-geo-alt"></i> Chimyon —
+                            Chorvoq</span
+                          ><span
+                            ><i class="bi bi-calendar3"></i> 2 kun / 1 tun</span
+                          >
+                        </div>
+                        <h3 class="h5 text-primary my-3">
+                          Tog‘lar sari sayohat
+                        </h3>
+                        <div
+                          class="d-flex justify-content-between align-items-center border-top pt-3"
+                        >
+                          <div>
+                            <small class="d-block text-secondary"
+                              >Bir kishi uchun</small
+                            ><strong class="text-primary fs-5"
+                              >1 450 000</strong
+                            >
+                            <small>so‘m</small>
+                          </div>
+                          <button
+                            class="btn btn-info rounded-circle circle-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                            aria-label="Band qilish"
+                          >
+                            <i class="bi bi-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= HOTELS ================= -->
+      <section id="page-hotels" class="page">
+        <div class="page-hero text-center text-white">
+          <div class="container">
+            <span class="eyebrow">Sinalgan maskanlar</span>
+            <h1>Qulay mehmonxonalar</h1>
+            <p class="mx-auto text-white-50">
+              Sayohatingiz davomida maroqli hordiq uchun eng yaxshi
+              mehmonxonalarni saraladik.
+            </p>
+          </div>
+        </div>
+        <div class="py-section">
+          <div class="container">
+            <ul
+              class="nav nav-pills flex-nowrap overflow-auto gap-2 mb-4 pb-1"
+              role="tablist"
+            >
+              <li>
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="pill"
+                  data-bs-target="#h-all"
+                  type="button"
+                >
+                  Barchasi
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="pill"
+                  data-bs-target="#h-sam"
+                  type="button"
+                >
+                  Samarqand
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="pill"
+                  data-bs-target="#h-bux"
+                  type="button"
+                >
+                  Buxoro
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="pill"
+                  data-bs-target="#h-xiv"
+                  type="button"
+                >
+                  Xiva
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="pill"
+                  data-bs-target="#h-tosh"
+                  type="button"
+                >
+                  Toshkent
+                </button>
+              </li>
+              <li>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="pill"
+                  data-bs-target="#h-tog"
+                  type="button"
+                >
+                  Tog‘lar
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="h-all">
+                <div class="row g-4">
+                  <div class="col-lg-6">
+                    <div class="card hotel-card">
+                      <div class="row g-0 h-100">
+                        <div class="col-5">
+                          <img
+                            src="images/manzara_rasmi-upscaled-4x.png"
+                            class="w-100 h-100 object-fit-cover"
+                            alt="Registon Palace"
+                          />
+                        </div>
+                        <div class="col-7 p-4 position-relative">
+                          <span
+                            class="badge rating position-absolute top-0 end-0 m-3"
+                            ><i class="bi bi-star-fill"></i> 4.8</span
+                          >
+                          <small class="text-secondary"
+                            ><i class="bi bi-geo-alt"></i> Samarqand</small
+                          >
+                          <h3 class="h5 text-primary mt-2 mb-4">
+                            Silk Road mehmonxonasi
+                          </h3>
+                          <p class="small text-secondary mb-3">
+                            <strong class="text-dark fs-5">780 000</strong>
+                            so‘m / tun
+                          </p>
+                          <button
+                            class="btn btn-light w-100 fw-bold"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                          >
+                            Band qilish
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="card hotel-card">
+                      <div class="row g-0 h-100">
+                        <div class="col-5">
+                          <img
+                            src="images/images (2).jpg"
+                            class="w-100 h-100 object-fit-cover"
+                            alt="Ark Boutique Hotel"
+                          />
+                        </div>
+                        <div class="col-7 p-4 position-relative">
+                          <span
+                            class="badge rating position-absolute top-0 end-0 m-3"
+                            ><i class="bi bi-star-fill"></i> 4.7</span
+                          >
+                          <small class="text-secondary"
+                            ><i class="bi bi-geo-alt"></i> Buxoro</small
+                          >
+                          <h3 class="h5 text-primary mt-2 mb-4">
+                            Ark Boutique Hotel
+                          </h3>
+                          <p class="small text-secondary mb-3">
+                            <strong class="text-dark fs-5">620 000</strong>
+                            so‘m / tun
+                          </p>
+                          <button
+                            class="btn btn-light w-100 fw-bold"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                          >
+                            Band qilish
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="card hotel-card">
+                      <div class="row g-0 h-100">
+                        <div class="col-5">
+                          <img
+                            src="images/tarixiy_obida_rasmi-upscaled-4x.png"
+                            class="w-100 h-100 object-fit-cover"
+                            alt="Xiva Orient Inn"
+                          />
+                        </div>
+                        <div class="col-7 p-4 position-relative">
+                          <span
+                            class="badge rating position-absolute top-0 end-0 m-3"
+                            ><i class="bi bi-star-fill"></i> 4.6</span
+                          >
+                          <small class="text-secondary"
+                            ><i class="bi bi-geo-alt"></i> Xiva</small
+                          >
+                          <h3 class="h5 text-primary mt-2 mb-4">
+                            Xiva Orient Inn
+                          </h3>
+                          <p class="small text-secondary mb-3">
+                            <strong class="text-dark fs-5">540 000</strong>
+                            so‘m / tun
+                          </p>
+                          <button
+                            class="btn btn-light w-100 fw-bold"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                          >
+                            Band qilish
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="card hotel-card">
+                      <div class="row g-0 h-100">
+                        <div class="col-5">
+                          <img
+                            src="images/tungi_samarqand_rasmi-upscaled-4x.png"
+                            class="w-100 h-100 object-fit-cover"
+                            alt="Tashkent Grand"
+                          />
+                        </div>
+                        <div class="col-7 p-4 position-relative">
+                          <span
+                            class="badge rating position-absolute top-0 end-0 m-3"
+                            ><i class="bi bi-star-fill"></i> 4.9</span
+                          >
+                          <small class="text-secondary"
+                            ><i class="bi bi-geo-alt"></i> Toshkent</small
+                          >
+                          <h3 class="h5 text-primary mt-2 mb-4">
+                            Tashkent Grand
+                          </h3>
+                          <p class="small text-secondary mb-3">
+                            <strong class="text-dark fs-5">1 100 000</strong>
+                            so‘m / tun
+                          </p>
+                          <button
+                            class="btn btn-light w-100 fw-bold"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                          >
+                            Band qilish
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="h-sam">
+                <div class="row g-4">
+                  <div class="col-lg-6">
+                    <div class="card hotel-card">
+                      <div class="row g-0 h-100">
+                        <div class="col-5">
+                          <img
+                            src="images/samarqand.jpg"
+                            class="w-100 h-100 object-fit-cover"
+                            alt="Registon Palace"
+                          />
+                        </div>
+                        <div class="col-7 p-4 position-relative">
+                          <span
+                            class="badge rating position-absolute top-0 end-0 m-3"
+                            ><i class="bi bi-star-fill"></i> 4.8</span
+                          >
+                          <small class="text-secondary"
+                            ><i class="bi bi-geo-alt"></i> Samarqand</small
+                          >
+                          <h3 class="h5 text-primary mt-2 mb-4">
+                            Registon Palace
+                          </h3>
+                          <p class="small text-secondary mb-3">
+                            <strong class="text-primary fs-5">780 000</strong>
+                            so‘m / tun
+                          </p>
+                          <button
+                            class="btn btn-light w-100 fw-bold"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                          >
+                            Band qilish
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="h-bux">
+                <div class="row g-4">
+                  <div class="col-lg-6">
+                    <div class="card hotel-card">
+                      <div class="row g-0 h-100">
+                        <div class="col-5">
+                          <img
+                            src="images/buxoro.jpg"
+                            class="w-100 h-100 object-fit-cover"
+                            alt="Ark Boutique Hotel"
+                          />
+                        </div>
+                        <div class="col-7 p-4 position-relative">
+                          <span
+                            class="badge rating position-absolute top-0 end-0 m-3"
+                            ><i class="bi bi-star-fill"></i> 4.7</span
+                          >
+                          <small class="text-secondary"
+                            ><i class="bi bi-geo-alt"></i> Buxoro</small
+                          >
+                          <h3 class="h5 text-primary mt-2 mb-4">
+                            Ark Boutique Hotel
+                          </h3>
+                          <p class="small text-secondary mb-3">
+                            <strong class="text-primary fs-5">620 000</strong>
+                            so‘m / tun
+                          </p>
+                          <button
+                            class="btn btn-light w-100 fw-bold"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                          >
+                            Band qilish
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="h-xiv">
+                <div class="row g-4">
+                  <div class="col-lg-6">
+                    <div class="card hotel-card">
+                      <div class="row g-0 h-100">
+                        <div class="col-5">
+                          <img
+                            src="images/xiva.jpg"
+                            class="w-100 h-100 object-fit-cover"
+                            alt="Xiva Orient Inn"
+                          />
+                        </div>
+                        <div class="col-7 p-4 position-relative">
+                          <span
+                            class="badge rating position-absolute top-0 end-0 m-3"
+                            ><i class="bi bi-star-fill"></i> 4.6</span
+                          >
+                          <small class="text-secondary"
+                            ><i class="bi bi-geo-alt"></i> Xiva</small
+                          >
+                          <h3 class="h5 text-primary mt-2 mb-4">
+                            Xiva Orient Inn
+                          </h3>
+                          <p class="small text-secondary mb-3">
+                            <strong class="text-primary fs-5">540 000</strong>
+                            so‘m / tun
+                          </p>
+                          <button
+                            class="btn btn-light w-100 fw-bold"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                          >
+                            Band qilish
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="h-tosh">
+                <div class="row g-4">
+                  <div class="col-lg-6">
+                    <div class="card hotel-card">
+                      <div class="row g-0 h-100">
+                        <div class="col-5">
+                          <img
+                            src="images/tungi_samarqand_rasmi-upscaled-4x.png"
+                            class="w-100 h-100 object-fit-cover"
+                            alt="Tashkent Grand"
+                          />
+                        </div>
+                        <div class="col-7 p-4 position-relative">
+                          <span
+                            class="badge rating position-absolute top-0 end-0 m-3"
+                            ><i class="bi bi-star-fill"></i> 4.9</span
+                          >
+                          <small class="text-secondary"
+                            ><i class="bi bi-geo-alt"></i> Toshkent</small
+                          >
+                          <h3 class="h5 text-primary mt-2 mb-4">
+                            Tashkent Grand
+                          </h3>
+                          <p class="small text-secondary mb-3">
+                            <strong class="text-primary fs-5">1 100 000</strong>
+                            so‘m / tun
+                          </p>
+                          <button
+                            class="btn btn-light w-100 fw-bold"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookModal"
+                          >
+                            Band qilish
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="h-tog">
+                <p class="text-secondary">
+                  Bu shaharda hozircha mehmonxona yo‘q.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ABOUT ================= -->
+      <section id="page-about" class="page">
+        <div class="page-hero text-center text-white">
+          <div class="container">
+            <span class="eyebrow">Biz haqimizda</span>
+            <h1>Sayohatni sevuvchi jamoa</h1>
+            <p class="mx-auto text-white-50">
+              Travel Hub — O‘zbekistonni kashf etishni oson, xavfsiz va zavqli
+              qiladigan mahalliy sayohat platformasi
+            </p>
+          </div>
+        </div>
+        <div class="py-section">
+          <div class="container">
+            <div class="row align-items-center g-5">
+              <div class="col-lg-6">
+                <img
+                  src="images/samarqand.jpg"
+                  class="img-fluid rounded-5 w-100 object-fit-cover about-img"
+                  alt="Registon"
+                />
+              </div>
+              <div class="col-lg-6">
+                <span class="eyebrow">Bizning maqsadimiz</span>
+                <h2 class="h-title">
+                  Har bir safarni qadrlanadigan xotiraga aylantiramiz
+                </h2>
+                <p class="text-secondary">
+                  Biz sayohatchilarni mamlakatimizning eng go‘zal maskanlari
+                  bilan bog‘laymiz. Mahalliy yo‘lboshchilar, sinalgan
+                  mehmonxonalar va shaffof narxlar orqali safaringizning har bir
+                  bosqichida yoningizdamiz.
+                </p>
+                <div class="row g-3 mt-3">
+                  <div class="col">
+                    <div class="bg-white rounded-4 shadow-sm p-3">
+                      <strong class="d-block fs-4 text-info">50+</strong
+                      ><span class="small text-secondary">Yo‘nalish</span>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="bg-white rounded-4 shadow-sm p-3">
+                      <strong class="d-block fs-4 text-info">12 000+</strong
+                      ><span class="small text-secondary">Mamnun mijoz</span>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="bg-white rounded-4 shadow-sm p-3">
+                      <strong class="d-block fs-4 text-info">4.9</strong
+                      ><span class="small text-secondary">O‘rtacha baho</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="py-section bg-body-secondary">
+          <div class="container">
+            <div class="mb-5">
+              <span class="eyebrow">Qadriyatlarimiz</span>
+              <h2 class="h-title">Biz uchun muhim tamoyillar</h2>
+            </div>
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="bg-white rounded-4 p-4 h-100">
+                  <span class="icon-box mb-3"
+                    ><i class="bi bi-shield-check"></i
+                  ></span>
+                  <h3 class="h5 text-primary">Ishonch</h3>
+                  <p class="text-secondary mb-0">
+                    Va’damizga amal qilamiz va ochiq ishlaymiz.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="bg-white rounded-4 p-4 h-100">
+                  <span class="icon-box mb-3"><i class="bi bi-heart"></i></span>
+                  <h3 class="h5 text-primary">G‘amxo‘rlik</h3>
+                  <p class="text-secondary mb-0">
+                    Sayohatchining qulayligi — har bir qarorimizning markazida.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="bg-white rounded-4 p-4 h-100">
+                  <span class="icon-box mb-3"
+                    ><i class="bi bi-compass"></i
+                  ></span>
+                  <h3 class="h5 text-primary">Mahalliy bilim</h3>
+                  <p class="text-secondary mb-0">
+                    Yo‘lboshchilarimiz har bir manzilning tarixini yaxshi
+                    bilishadi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container py-5 my-5">
+          <div
+            class="cta-box d-flex flex-wrap align-items-center justify-content-between gap-4 text-white"
+          >
+            <div>
+              <small class="fw-bold cta-small"
+                >Keyingi manzilingiz tayyormi?</small
+              >
+              <h2 class="my-2">Orzudagi sayohatni bugun boshlang</h2>
+              <p class="mb-0 text-white-50">
+                Bizga istaklaringizni ayting, qolganini mutaxassislarimiz
+                rejalashtiradi.
+              </p>
+            </div>
+            <button
+              class="btn btn-warning fw-bold px-4 py-3"
+              data-bs-toggle="modal"
+              data-bs-target="#bookModal"
+            >
+              Bepul maslahat olish <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="th-footer pt-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <a
+              class="d-flex align-items-center gap-2 fw-bold text-white text-decoration-none fs-5 mb-3"
+              href="#page-home"
+            >
+              <span class="logo-mark"><i class="bi bi-geo-alt"></i></span>Travel
+              <b class="text-info">Hub</b>
+            </a>
+            <p class="small">
+              O‘zbekiston bo‘ylab unutilmas sayohatlarni oson va ishonchli
+              rejalashtiring.
+            </p>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 text-white mb-3">Sahifalar</h3>
+            <ul class="list-unstyled small">
+              <li><a href="#page-destinations">Yo‘nalishlar</a></li>
+              <li><a href="#page-tours">Sayohat turlari</a></li>
+              <li><a href="#page-hotels">Mehmonxonalar</a></li>
+              <li><a href="#page-about">Biz haqimizda</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-3">
+            <h3 class="h6 text-white mb-3">Bog‘lanish</h3>
+            <p class="small mb-1">+998 71 200 20 20</p>
+            <p class="small mb-1">info@travelhub.uz</p>
+            <p class="small">Toshkent, O‘zbekiston</p>
+          </div>
+          <div class="col-lg-3">
+            <h3 class="h6 text-white mb-3">Yangiliklardan xabardor bo‘ling</h3>
+            <form
+              class="input-group subscribe"
+              action="#page-home"
+              method="get"
+            >
+              <input
+                class="form-control"
+                type="email"
+                name="email"
+                placeholder="Elektron pochtangiz"
+                required
+              />
+              <button class="btn btn-info text-white" aria-label="Obuna">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="border-top border-light border-opacity-10 mt-5 py-4 small">
+          © 2026 Travel Hub. Barcha huquqlar himoyalangan.
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= MODAL 1: forma ================= -->
+    <div class="modal fade " id="bookModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content rounded-5 p-3 ">
+          <div class="modal-body p-4 ">
+            <button
+              type="button"
+              class="btn-close position-absolute top-0 end-0 m-4"
+              data-bs-dismiss="modal"
+              aria-label="Yopish"
+            ></button>
+            <span class="eyebrow">Bepul maslahat</span>
+            <h2 class="h3 fw-bold text-primary mt-2">Sayohatni boshlaymiz</h2>
+            <p class="text-secondary">
+              Ma‘lumotlaringizni qoldiring, biz siz bilan bog‘lanamiz.
+            </p>
+            <form class="vstack gap-3 mt-4">
+              <div>
+                <label class="form-label small fw-bold text-primary" for="fName"
+                  >Ismingiz</label
+                >
+                <input
+                  id="fName"
+                  name="name"
+                  required
+                  class="form-control p-3"
+                  placeholder="Ismingizni kiriting"
+                />
+              </div>
+              <div>
+                <label
+                  class="form-label small fw-bold text-primary"
+                  for="fPhone"
+                  >Telefon raqamingiz</label
+                >
+                <input
+                  id="fPhone"
+                  name="phone"
+                  required
+                  type="tel"
+                  class="form-control p-3"
+                  placeholder="+998 90 111 22 33"
+                />
+              </div>
+              <div>
+                <label
+                  class="form-label small fw-bold text-primary pt-1"
+                  for="modalTopic"
+                  >Qiziqish</label
+                >
+                <select
+                  id="modalTopic"
+                  name="destination"
+                  class="form-select p-3"
+                  required
+                >
+                  <option value="">Yo‘nalishni tanlang</option>
+                  <option>Samarqand</option>
+                  <option>Buxoro</option>
+                  <option>Xiva</option>
+                  <option>Toshkent</option>
+                  <option>Tog‘lar</option>
+                </select>
+              </div>
+              <!-- Bootstrap: bitta modaldan ikkinchisiga o‘tish -->
+              <button
+                type="button"
+                class="btn btn-primary py-3 mt-2 d-flex justify-content-end d-block "
+                data-bs-toggle="modal"
+                data-bs-target="#doneModal"
+              >
+                So‘rov yuborish
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= MODAL 2: muvaffaqiyat ================= -->
+    <div class="modal fade" id="doneModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-5 p-3">
+          <div class="modal-body p-4 text-center">
+            <span class="done-circle"><i class="bi bi-check-lg"></i></span>
+            <h2 class="h3 fw-bold text-primary mt-3">
+              So‘rovingiz qabul qilindi
+            </h2>
+            <p class="text-secondary">
+              Mutaxassislarimiz tez orada siz bilan bog‘lanishadi.
+            </p>
+            <button class="btn btn-primary" data-bs-dismiss="modal">
+              Yopish
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faqat Bootstrap (modal, menyu, pill'lar shu orqali ishlaydi) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
